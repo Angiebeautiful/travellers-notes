@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traveller's Notes · Solo Traveller Interviews</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Noto+Serif+SC:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="topbar">
+      <a class="logo" href="#top" aria-label="Traveller's Notes home">
+        <span class="logo-mark">T</span>
+        <span>Traveller's Notes</span>
+      </a>
+      <p class="topbar-note">SOLO TRAVELLER INTERVIEWS <span>·</span> 2026</p>
+      <button class="about-button" type="button" id="aboutButton">About the project <span>↗</span></button>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <p class="eyebrow">CLASSROOM FIELD NOTES / 01</p>
+        <h1 id="hero-title">One country,<br /><em>a story of going solo.</em></h1>
+        <form class="search-panel" id="countryForm">
+          <label for="countryInput">Where did you go?</label>
+          <div class="search-row">
+            <input id="countryInput" name="country" type="text" value="United Kingdom" autocomplete="off" placeholder="Try any country, e.g. United Kingdom" />
+            <button type="submit">Explore it <span>→</span></button>
+          </div>
+          <div class="quick-countries" aria-label="Suggested destinations">
+            <span>Try</span>
+            <button type="button" data-country="United Kingdom">United Kingdom</button>
+            <button type="button" data-country="India">India</button>
+            <button type="button" data-country="Spain">Spain</button>
+            <button type="button" data-country="Vietnam">Vietnam</button>
+            <button type="button" data-country="Slovenia">Slovenia</button>
+            <button type="button" data-country="Japan">Japan</button>
+            <button type="button" data-country="Italy">Italy</button>
+            <button type="button" data-country="Brazil">Brazil</button>
+          </div>
+        </form>
+      </section>
+
+      <section class="results" id="results" aria-live="polite">
+        <div class="result-heading">
+          <p class="eyebrow">DESTINATION FILE</p>
+          <div class="title-line">
+            <h2 id="countryTitle">United Kingdom</h2>
+            <span class="country-local" id="countryLocal">CITY GUIDE</span>
+            <span class="result-count" id="resultCount">09 NOTES</span>
+          </div>
+          <p id="countryDescription" class="country-description">Six starting points for a solo journey through the United Kingdom.</p>
+        </div>
+
+        <div class="card-grid" id="cardGrid"></div>
+
+        <aside class="interview-prompt">
+          <span class="prompt-number">Q.01</span>
+          <div>
+            <p class="eyebrow">INTERVIEW PROMPT</p>
+            <p>If you could bring back one photograph, which moment from this trip would it hold?</p>
+          </div>
+          <button id="nextQuestion" type="button">Another question <span>→</span></button>
+        </aside>
+      </section>
+    </main>
+
+    <dialog id="aboutDialog">
+      <button class="dialog-close" id="closeDialog" aria-label="Close">×</button>
+      <p class="eyebrow">ABOUT THE PROJECT</p>
+      <h2>A small archive<br />for every solo traveller in class.</h2>
+      <p>Use a destination to start the conversation, then turn faraway views and favourite tastes into the next story shared in class.</p>
+    </dialog>
+
+    <footer>
+      <span>TRAVELLER'S NOTES</span>
+      <span>MADE FOR CURIOUS CLASSMATES</span>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
